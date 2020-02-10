@@ -33,7 +33,6 @@ Typically mod's config file looks like this:
 | ------------ | ------------ |
 | OriginLocaleCount | Game default support language count, do not modify |
 | CurrentLanguageCode | User current selected language code enum value |
-| CurrentLanguageCode | User current selected language code enum value |
 | locales | Mod manually added locales list |
 | Name | Locale name, make sure it's unique |
 | DisplayName | Locale display name |
