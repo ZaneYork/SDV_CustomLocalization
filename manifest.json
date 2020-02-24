@@ -1,9 +1,10 @@
 {
     "Name": "Custom Localization",
     "Author": "ZaneYork",
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "Description": "Localization for not exist locale.",
-    "UniqueID": "SMAPI.CustomLocalization",
+    "UniqueID": "ZaneYork.CustomLocalization",
     "EntryDll": "CustomLocalization.dll",
-    "MinimumApiVersion": "3.2.0"
+    "MinimumApiVersion": "3.2.0",
+    "UpdateKeys": [ "Nexus:5377" ]
 }
