@@ -1,7 +1,7 @@
 {
     "Name": "Custom Localization",
     "Author": "ZaneYork",
-    "Version": "1.0.1",
+    "Version": "1.0.2",
     "Description": "Localization for not exist locale.",
     "UniqueID": "ZaneYork.CustomLocalization",
     "EntryDll": "CustomLocalization.dll",
