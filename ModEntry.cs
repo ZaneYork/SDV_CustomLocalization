@@ -5,6 +5,8 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewValley.BellsAndWhistles;
+using StardewValley.Menus;
+using StardewValley.Mobile;
 using StardewValley.Objects;
 using StardewValley.Projectiles;
 
@@ -75,7 +77,16 @@ namespace StardewModdingAPI.Mods.CustomLocalization
             Game1.mobileSpriteSheet = ((ContentManager)Game1.content).Load<Texture2D>("LooseSprites\\MobileAtlas_manually_made");
             Game1.achievements = (Dictionary<int, string>)((ContentManager)Game1.content).Load<Dictionary<int, string>>("Data\\Achievements");
             Game1.NPCGiftTastes = (IDictionary<string, string>)((ContentManager)Game1.content).Load<Dictionary<string, string>>("Data\\NPCGiftTastes");
+            Game1.onScreenMenus.Clear();
             this.Helper.Reflection.GetMethod(Game1.game1, "TranslateFields").Invoke();
+            Game1.dayTimeMoneyBox = new DayTimeMoneyBox();
+            Game1.dayTimeMoneyBox.game1 = Game1.game1;
+            Game1.onScreenMenus.Add((IClickableMenu)Game1.dayTimeMoneyBox);
+            Game1.toolbar = new Toolbar();
+            Game1.virtualJoypad = new VirtualJoypad();
+            Game1.onScreenMenus.Add((IClickableMenu)Game1.toolbar);
+            Game1.buffsDisplay = new BuffsDisplay();
+            Game1.onScreenMenus.Add((IClickableMenu)Game1.buffsDisplay);
             Game1.dialogueFont = (SpriteFont)((ContentManager)Game1.content).Load<SpriteFont>("Fonts\\SpriteFont1");
             Game1.smallFont = (SpriteFont)((ContentManager)Game1.content).Load<SpriteFont>("Fonts\\SmallFont");
             Game1.tinyFont = (SpriteFont)((ContentManager)Game1.content).Load<SpriteFont>("Fonts\\tinyFont");
