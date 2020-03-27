@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Reflection;
+using Android.OS;
 using Harmony;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -29,6 +30,8 @@ namespace StardewModdingAPI.Mods.CustomLocalization
 
         public override void Entry(IModHelper helper)
         {
+            if (Build.VERSION.SdkInt < BuildVersionCodes.M)
+                return;
             Instance = this;
             ModConfig = helper.ReadConfig<ModConfig>();
             ModPath = helper.DirectoryPath;
