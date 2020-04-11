@@ -12,19 +12,7 @@
 
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\libs\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Android">
-      <HintPath>..\libs\Mono.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework">
-      <HintPath>..\libs\\MonoGame.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="StardewModdingAPI">
-      <HintPath>..\libs\StardewModdingAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="StardewValley">
-      <HintPath>..\libs\\StardewValley.dll</HintPath>
+      <HintPath>..\..\libs\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -32,5 +20,8 @@
     <None Update="manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="3.0.0-beta.7" />
   </ItemGroup>
 </Project>
